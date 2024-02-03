@@ -1,0 +1,23 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "prettier"
+  ],
+  "parser": "@typescript-eslint/parser",
+  // "parserOptions": {
+  //   "project": true
+  // },
+
+  "rules": {
+    "@typescript-eslint/no-misused-promises": [
+      "error",
+      {
+        "checksVoidReturn": false
+      }
+    ],
+    "redos/no-vulnerable": "error",
+    "@typescript-eslint/explicit-function-return-type": "error" // 戻り値の型が明示されてないとエラー
+  }
+}
